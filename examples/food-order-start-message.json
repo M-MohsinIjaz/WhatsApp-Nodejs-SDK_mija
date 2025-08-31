@@ -1,0 +1,22 @@
+{
+	"messaging_product": "whatsapp",
+	"to": "<PHONE_NUMBER>",
+	"type": "interactive",
+	"interactive": {
+		"type": "flow",
+		"header": {
+			"type": "text",
+			"text": "Food Order"
+		},
+		"body": {
+			"text": "Tap to place your food order"
+		},
+		"action": {
+			"name": "food_order_flow",
+			"parameters": {
+				"version": "1.0",
+				"button_text": "Start Order"
+			}
+		}
+	}
+}
