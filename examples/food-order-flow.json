@@ -1,0 +1,57 @@
+{
+	"name": "food_order_flow",
+	"entry_screen": "menu",
+	"screens": [
+		{
+			"id": "menu",
+			"title": "Select a menu item",
+			"components": [
+				{
+					"type": "single-select",
+					"id": "item",
+					"label": "What would you like to eat?",
+					"required": true,
+					"options": [
+						{ "id": "margherita_pizza", "title": "Margherita Pizza" },
+						{ "id": "veggie_burger", "title": "Veggie Burger" },
+						{ "id": "pasta_alfredo", "title": "Pasta Alfredo" },
+						{ "id": "caesar_salad", "title": "Caesar Salad" },
+						{ "id": "sushi_roll", "title": "Sushi Roll" }
+					]
+				}
+			],
+			"next": "quantity"
+		},
+		{
+			"id": "quantity",
+			"title": "Quantity",
+			"components": [
+				{
+					"type": "text",
+					"id": "qty",
+					"label": "How many servings?",
+					"input_type": "number",
+					"required": true
+				}
+			],
+			"next": "confirm"
+		},
+		{
+			"id": "confirm",
+			"title": "Confirm order",
+			"components": [
+				{
+					"type": "summary",
+					"id": "summary",
+					"text": "Order: {{item}} x {{qty}}"
+				}
+			],
+			"actions": [
+				{
+					"type": "submit",
+					"label": "Place Order"
+				}
+			]
+		}
+	]
+}
